@@ -1,0 +1,27 @@
+    [{
+        "id" : 1,
+        "name" : "Titanic",
+        "year": "1995",
+        "runtime": "130 min",
+        "genre" : "comedy",
+        "director": "Sit Amet"  
+    },
+    {
+        "id" : 2,
+        "name" : "Nutella",
+        "year": "2002",
+        "runtime": "120 min",
+        "genre" : "horror",
+        "director": "John Travolta"
+        
+    },
+    {
+        "id" : 3,
+        "name" : "Star Wars",
+        "year": "2000",
+        "runtime": "140 min",
+        "genre" : "sci-fun",
+        "director": "George Lucas"
+        
+    }
+    ]
