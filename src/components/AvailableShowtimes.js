@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const AvailableShowtimes = (rep) => {
+export const AvailableShowtimes = props => {
 
-     return <button>{rep}</button>;
+     return <button> {props.time} </button>;
 }

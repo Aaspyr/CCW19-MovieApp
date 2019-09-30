@@ -1,25 +1,39 @@
 import React from 'react';
-import {Movie} from './Movie';
+import Movie from './Movie';
 import axios from 'axios';
 
 
 class DaysBookmarks extends React.Component {
     state = {
-        rep: []
+        movie: []
     }
     componentDidMount() {
         axios.get('https://cinemaapp2019.herokuapp.com/api/repertoires')
             .then(res => {
-                console.log(res.data);
-                
-                const rep = res.data;
-                this.setState({rep});
-            })  
+                // console.log(res.data);
+                const movie = res.data.map(day => {
+                    return day.date;
+                });
+                this.setState({ movie  })
+                // console.log(this.state.movie)
+            })
+            .catch(err => {
+                console.log(err);
+            })
     }
 
     render() {
         return (
-            <Movie rep={this.state.rep}/>
+            <div>
+            {this.state.movie.map((day, key) => {
+                return <button key={key}>{day}</button>;
+            })}
+             {this.state.movie.map((day, key) => {
+                return <Movie time={day} key={key}/>
+            })}
+            <Movie />
+            </div>
+            
         )
     }
 }
