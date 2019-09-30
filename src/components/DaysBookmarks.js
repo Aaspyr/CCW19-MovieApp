@@ -1,13 +1,25 @@
 import React from 'react';
 import {Movie} from './Movie';
-import * as data from './przyklad.json';
+import axios from 'axios';
 
-const {name} = data;
 
 class DaysBookmarks extends React.Component {
-    render(){
+    state = {
+        rep: []
+    }
+    componentDidMount() {
+        axios.get('https://cinemaapp2019.herokuapp.com/api/repertoires')
+            .then(res => {
+                console.log(res.data);
+                
+                const rep = res.data;
+                this.setState({rep});
+            })  
+    }
+
+    render() {
         return (
-            <Movie/>
+            <Movie rep={this.state.rep}/>
         )
     }
 }

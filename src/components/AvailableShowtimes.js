@@ -1,7 +1,6 @@
 import React from 'react';
 
-export class AvailableShowtimes extends React.Component {
-    render() {
-        return <div>Hi</div>;
-    }
+export const AvailableShowtimes = (rep) => {
+
+     return <button>{rep}</button>;
 }
