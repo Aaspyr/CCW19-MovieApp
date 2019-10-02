@@ -20,6 +20,10 @@ class PlacesGrid extends React.Component {
             if(row === this.state.occupiedPlaces[i].row && sit === this.state.occupiedPlaces[i].sit)
                 return 'occupied';
         }
+        for(let i = 0; i < this.props.currentSelected.length; i++){
+            if(row === this.props.currentSelected[i].row && sit === this.props.currentSelected[i].sit)
+                return 'selected';
+        }
         return 'available';
     }
 
@@ -37,7 +41,7 @@ class PlacesGrid extends React.Component {
             gridTemplateColumns: 'repeat(15, 1fr)'
         }
 
-        const grid = rows.map((row) => row.map((sit) => <Place row={sit.row} sit={sit.sit} status={this.getPlaceStatus(sit.row, sit.sit)} />));
+        const grid = rows.map((row) => row.map((sit) => <Place row={sit.row} sit={sit.sit} status={this.getPlaceStatus(sit.row, sit.sit)} handleClick={this.props.addSelected}/>));
         return(
             <div style={gridStyle}>
                 {grid}
