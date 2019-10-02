@@ -29,7 +29,7 @@
     font-weight: 300; 
     letter-spacing: 0.05em;
     font-family: 'Quicksand', sans-serif;
-    /*border: 2px solid red;*/
+    /*border: 2px solid red;*/ 
 }
 
 
@@ -40,7 +40,7 @@
 
 .kin {
     display: flex;
-    /*border: 2px solid white;*/
+    /*border: 2px solid white;*/ 
     padding-right: 0.8rem;
 }
 
@@ -64,64 +64,30 @@
     flex-direction: column;
     align-self: center;
 }
-.daybar {
+.messagebar {
     display: flex;
     /*border: 2px solid blue;*/
-    height: 7%;
+    height: 5%;
     width: 90%;
     font-size: 1.6em;
-    justify-content: space-between;
-    align-items: center;
-
-}
-
-.arrow {
-    display: flex;
-    /*border: 2px solid black;*/
-    width: 5%;
-    height: 70%;
-    justify-content: center; 
-    align-items: center;
-    font-weight: 700;
-}
-
-.left {
-    justify-content: flex-start;
-}
-
-.right {
-    justify-content: flex-end;
-}
-
-.calendar {
-    display: flex;
-    padding-left: 1.5em;
-    
-}
-
-.calendarpic {
-    width: 3.5rem;
-    
-}
-.day {
-    display: flex;
-    /*border: 2px solid red;*/
-    width: 20%;
-    height: 70%;
     justify-content: center;
     align-items: center;
-    font-weight: 300;
-    border-radius: 0.3em; 
+    background-color: rgb(178, 102, 255);
+    border-radius: 1rem;
+    color: rgb(256, 256, 256);
+    align-self: center;
+    font-size: 1.4em;
 }
 
 .today {
     display: flex;
     /*border: 2px solid green;*/
-    height: 5%;
-    width: 90%;
+    height: 7%;
+    width: 30%;
     font-size: 1.4em;
     align-items: flex-end;
     font-weight: 400;
+    justify-content: center;
 }
 
 .feed {
@@ -141,6 +107,10 @@
     width: 30%;
     background-color: rgba(66, 128, 125, 0.9);
     
+}
+
+.moviebox:hover {
+    cursor: pointer;
 }
 
 .pic {
