@@ -18,7 +18,7 @@ class Movie extends React.Component {
     render() {
         return (
             <div>
-            <MovieInfo title={this.props.title}></MovieInfo>
+            <MovieInfo title={this.props.title} image={this.props.posterUrl} description={this.props.description}></MovieInfo>
             <AvailableShowtimes time={this.props.time}></AvailableShowtimes>
             </div>
         )
