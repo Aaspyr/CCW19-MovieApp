@@ -1,0 +1,273 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh; 
+    border: 0.5rem solid rgba(56, 60, 67, 0.8);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    flex-direction: column; 
+    justify-content: space-between
+}
+
+.navbar {
+    background-color: rgba(56, 60, 67, 0.8);
+    width: 100%;
+    height: 4.6rem;
+    display: flex;
+    justify-content: center;
+}
+
+
+.daybar {
+    display: flex;
+    /*border: 2px solid blue;*/
+    height: 50%;
+    width: 100%;
+    font-size: 1.6em;
+    justify-content: space-between;
+    align-items: center;
+    align-self: center;
+}
+
+.arrow {
+    display: flex;
+    /*border: 2px solid black;*/
+    width: 5%;
+    height: 70%;
+    justify-content: center; 
+    align-items: center;
+    font-weight: 700;
+}
+
+.left {
+    justify-content: flex-end;
+}
+
+.right {
+    justify-content: flex-start;
+}
+
+.day {
+    display: flex;
+    /*border: 2px solid red;*/
+    width: 15%;
+    height: 90%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    border-radius: 0.2em;
+    background-color: rgb(256, 256, 256);
+    font-size: 1.3rem;
+}
+
+.day:hover {
+    cursor: pointer;
+    background-color: rgb(178, 102, 255);
+    color: rgb(256, 256, 256); 
+}
+
+.content {
+    /*border: 5px solid red;*/
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.box1 {
+    display: flex;
+    /*border: 2px solid blue;*/
+    height: 75%;
+    width: 55rem;
+    justify-content: space-between;
+    align-self: center; 
+}
+
+.nums {
+    display: flex;
+    /*border: 2px solid black;*/
+    height: 23.2rem;
+    width: 5%;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    align-self: center;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 0.5rem;
+
+}
+
+.venue {
+    display: flex;
+    width: 100%;
+    height: 100%; 
+    /*border: 2px solid red;*/
+    align-items: center;
+    justify-content: space-around;
+    
+}
+
+.seats {
+    display: flex;
+    /*border: 2px solid violet;*/
+    height: 23.5rem;
+    width: 10rem;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.seat {
+    display: flex;
+    background-color: rgb(30, 78, 134);
+    height: 1.7rem;
+    width: 1.7rem;
+    justify-content: center;
+    font-size: 1.5em;
+    border-radius: 0.3rem;
+    align-items: center;
+    color: rgb(256, 256, 256);
+
+}
+
+.box2 {
+    display:flex;
+    /*border: 2px solid yellow;*/
+    height: 25%;
+    width: 70%;
+    justify-content: space-around;
+    align-self: center;
+    
+}
+
+.index {
+    display: flex;
+    /*border: 2px solid pink;*/
+    height: 55%;
+    width: 50%;
+    flex-direction: column;
+    font-size: 1.3rem;
+    justify-content: space-around;
+    
+}
+
+.chosen {
+    /*border: 2px solid red;*/ 
+    width: 90%;
+    display: flex;
+}
+
+.aviable {
+    /*border: 2px solid red;*/
+    width: 90%;
+    align-self: center;
+    display: flex;
+}
+
+.unaviable {
+    /*border: 2px solid red;*/
+    width: 90%;
+    align-self: flex-end;
+    display: flex;
+}
+
+.chosenseat {
+    display: flex;
+    background-color: rgb(178, 102, 255);
+    height: 1.7rem;
+    width: 1.7rem;
+    justify-content: center;
+    font-size: 1.5em;
+    border-radius: 0.3rem;
+}
+
+.aviableseat {
+    display: flex;
+    background-color: rgb(30, 78, 134);
+    height: 1.7rem;
+    width: 1.7rem;
+    justify-content: center;
+    font-size: 1.5em;
+    border-radius: 0.3rem;
+    
+}
+
+.unaviableseat {
+    display: flex;
+    background-color: rgb(55, 56, 57);
+    height: 1.7rem;
+    width: 1.7rem;
+    justify-content: center;
+    font-size: 1.5em;
+    border-radius: 0.3rem;
+}
+
+.txt1 {
+    /*border: 2px solid blue;*/
+    width: 80%;
+    padding-left: 0.5rem;
+}
+
+.confirmbar {
+    /*border: 2px solid lightgreen;*/
+    height: 70%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.txt2 {
+    /*border: 2px solid red;*/
+    width: 55%;
+    font-size: 1.1rem;
+    color: rgba(37, 38, 38, 0.49);
+    padding-bottom: 0.2rem;
+}
+
+.btn {
+    display: flex;
+    font-size: 1.5rem;
+    background-color: rgb(178, 102, 255);
+    width: 55%;
+    height: 26%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+    color: rgb(256, 256, 256);
+    transition: 0.2s; 
+}
+
+.seat:hover {
+    cursor: pointer;
+    background-color: rgb(178, 102, 255);
+}
+
+.hid {
+    display: flex;
+    opacity: 0;
+    border-radius: 0.3rem; 
+    width: 2rem;
+    height: 1.8rem;
+    align-items: center;
+    justify-content: center; 
+}
+
+.hid:hover {
+    opacity: 1; 
+}
+
+.arrow:hover {
+    cursor: pointer;
+}
+
+.btn:hover {
+    cursor: pointer;
+    transform: scale(1.03);
+}
