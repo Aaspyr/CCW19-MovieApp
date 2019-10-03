@@ -1,0 +1,26 @@
+.placeAvailable{
+    background-color: #1E4E86;
+    color: white;
+    width: 75%;
+    height: 80%;
+    text-align: center;
+    border-radius: 15%;
+}
+
+.placeSelected{
+    background-color: #B366FF;
+    color: white;
+    width: 75%;
+    height: 80%;
+    text-align: center;
+    border-radius: 15%;
+}
+
+.placeOccupied{
+    background-color:#373839;
+    color: white;
+    width: 75%;
+    height: 80%;
+    text-align: center;
+    border-radius: 15%;
+}

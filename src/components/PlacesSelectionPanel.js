@@ -1,5 +1,6 @@
 import React from 'react';
 import PlacesGrid from './PlacesGrid';
+import './PlacesSelectionPanel.css';
 
 
 class PlacesSelectionPanel extends React.Component {
@@ -23,10 +24,10 @@ class PlacesSelectionPanel extends React.Component {
 
     render() {
         return (
-        <div>
-           <div>Ekran</div>
+        <div className = 'panel'>
+           <div className = 'screen'>Ekran</div>
            <PlacesGrid rows={10} sits={15} currentSelected={this.state.selectedPlaces} addSelected={this.updateSelectedPlaces}/>
-           <button>Zarezerwuj</button>
+           <button className="reserveButton">Zarezerwuj</button>
         </div>
         );
     }
