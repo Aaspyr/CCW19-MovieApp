@@ -1,18 +1,11 @@
 import React from 'react';
 
-class Movie extends React.Component {
-    state = {
-        movie: [],
-        fat: []
-    }
-    
-    render() {
-        return (
+export Movie = props => {
+    return (
             <div>
-            {this.props.title}
+            <MovieInfo id={props.id} title={props.title} image={props.posterUrl} description={props.description}></MovieInfo>
+            <AvailableShowtimes time={this.props.time}></AvailableShowtimes>
             </div>
-        )
-    }
+        );
 }
 
-export default Movie;
