@@ -3,10 +3,18 @@ import { AvailableShowtimes } from './AvailableShowtimes';
 import {MovieInfo} from './MovieInfo';
 
 class Movie extends React.Component {
-    state = {
-        movie: []
-    }
-    
+
+
+    // unique = () => {
+    //     let uniq = [];
+    //     uniq = _.uniq([this.props.title]);
+    //     uniq.map(e=> {
+    //         return uniq + e;
+    //     });
+    //     return [console.log(uniq), console.log(this.props.title)];
+    // }
+    // NIE UMIEM :'(
+
     render() {
         return (
             <div>
