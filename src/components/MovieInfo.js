@@ -1,11 +1,13 @@
 import React from 'react';
 
-export MovieInfo = props => {
+export const MovieInfo = props => {
     return (
-        <div>
-        <img src={props.image} className="filmImage"/>
-        <h1 className="filmImage">{props.title}</h1>
-        <p className="filmDescription">{props.description}</p>
+        <div className="moviebox">
+            <div className="pic"><img src={props.image} className="shrooms"/></div>
+            <div className="txt">
+                <h1>{props.title}</h1>
+                <p>{props.description}</p>
+            </div>
         </div>
     );
 }
