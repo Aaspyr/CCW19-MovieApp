@@ -2,8 +2,14 @@ import React from 'react';
 import { AvailableShowtimes } from './AvailableShowtimes';
 import {MovieInfo} from './MovieInfo';
 
-class Movie extends React.Component {
-
+export Movie = props => {
+    return (
+            <div>
+            <MovieInfo id={props.id} title={props.title} image={props.posterUrl} description={props.description}></MovieInfo>
+            <AvailableShowtimes time={this.props.time}></AvailableShowtimes>
+            </div>
+        );
+}
 
     // unique = () => {
     //     let uniq = [];
@@ -15,14 +21,3 @@ class Movie extends React.Component {
     // }
     // NIE UMIEM :'(
 
-    render() {
-        return (
-            <div>
-            <MovieInfo title={this.props.title} image={this.props.posterUrl} description={this.props.description}></MovieInfo>
-            <AvailableShowtimes time={this.props.time}></AvailableShowtimes>
-            </div>
-        )
-    }
-}
-
-export default Movie;
