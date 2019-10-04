@@ -1,6 +1,8 @@
 import React from 'react';
 import axios from 'axios';
 import Place from './Place';
+import './PlacesGrid.css';
+
 class PlacesGrid extends React.Component {
     
     state = { occupiedPlaces: [{row: 0, sit: 0}]}
@@ -43,7 +45,7 @@ class PlacesGrid extends React.Component {
 
         const grid = rows.map((row) => row.map((sit) => <Place row={sit.row} sit={sit.sit} status={this.getPlaceStatus(sit.row, sit.sit)} handleClick={this.props.addSelected}/>));
         return(
-            <div style={gridStyle}>
+            <div style={gridStyle} className='placesGrid'>
                 {grid}
             </div>
         );

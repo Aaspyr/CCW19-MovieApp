@@ -1,21 +1,22 @@
 import React from 'react';
+import './Place.css';
 
 class Place extends React.Component{
 
 
     setStyle() {
         if(this.props.status === 'occupied')
-            return { color : 'red'};
+            return 'placeOccupied';
         else if(this.props.status === 'selected')
-            return { color : 'green'};
-        else return { color : 'black'};
+            return 'placeSelected';
+        else return 'placeAvailable';
     }
 
    
 
     render() {            
         return (
-            <div style={this.setStyle()} onClick={() => this.props.handleClick(this.props.row,this.props.sit, this.props.status)}>{this.props.sit} </div>
+            <div className={this.setStyle()} onClick={() => this.props.handleClick(this.props.row,this.props.sit, this.props.status)}>{this.props.sit} </div>
         );
     }
 }
