@@ -11,21 +11,21 @@ class DaysBookmarks extends React.Component {
     componentDidMount() {
         axios.get('https://cinemaapp2019.herokuapp.com/api/repertoires')
             .then(res => {
-                this.setState({ repertoire: [...res.data], currentMovie: res.data[0].movies  })
+                this.setState({ repertoire: [...res.data], currentMovies: res.data[0].movies  })
             })
             .catch(err => {
                 console.log(err);
             })
     }
 
-    getMovie = dayNumber => {
-        const day = this.state.repertoire[dayNumber];
-        if(day){
-            return day.movies.map(movie => {
-                return <Movie {...movie} key={movie._id}/>
-            })
-        }
-    }
+    // getMovie = dayNumber => {
+    //     const day = this.state.repertoire[dayNumber];
+    //     if(day){
+    //         return day.movies.map(movie => {
+    //             return <Movie {...movie} key={movie._id}/>
+    //         })
+    //     }
+    // }
 
     handleClick = (day) => {
         this.setState({currentMovies: day.movies})
@@ -33,15 +33,15 @@ class DaysBookmarks extends React.Component {
 
     render() {
         return (
-            <div>
+            <>
                 {this.state.repertoire.map( day => {
                     return <button key={day._id} onClick={() => this.handleClick(day)}>{day.date}</button>;
                 })}
 
-            {this.state.currentMovies.map(movie => {
-                return <Movie {...movie} key={movie._id}/>
-            })}         
-            </div>
+                {this.state.currentMovies.map(movie => {
+                    return <Movie {...movie} key={movie._id+"test"}/>
+                })}         
+            </>
             
         )
     }

@@ -3,7 +3,7 @@ import React from 'react';
 const AvailableShowtimes = props => {
 
      console.log(props)
-     return <div></div>//props.map(time => <button> {time} </button>);
+     return props.showTimes.map(showTime => <button key={showTime._id+"time"}> {showTime.time} </button>);
 }
 
 export default AvailableShowtimes

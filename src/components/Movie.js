@@ -4,10 +4,10 @@ import AvailableShowtimes from "./AvailableShowtimes"
 
 const Movie = props => {
     return (
-            <div>
-            <MovieInfo id={props._id} title={props.title} image={props.posterUrl} description={props.description}></MovieInfo>
-            <AvailableShowtimes time={props.showTimes}></AvailableShowtimes>
-            </div>
+            <>
+            <MovieInfo key={props._id} title={props.title} image={props.posterUrl} description={props.description}></MovieInfo>
+            <AvailableShowtimes key={props._id+"availableShowtimes"} showTimes={props.showTimes}></AvailableShowtimes>
+            </>
         );
 }
 
