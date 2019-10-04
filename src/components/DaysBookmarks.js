@@ -39,7 +39,7 @@ class DaysBookmarks extends React.Component {
                 })}
 
                 {this.state.currentMovies.map(movie => {
-                    return <Movie {...movie} key={movie._id+"test"}/>
+                    return <Movie {...movie} key={movie._id}/>
                 })}         
             </>
             
