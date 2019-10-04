@@ -1,6 +1,9 @@
 import React from 'react';
 
-export const AvailableShowtimes = props => {
+const AvailableShowtimes = props => {
 
-     return <button> {props.time} </button>;
+     console.log(props)
+     return <div></div>//props.map(time => <button> {time} </button>);
 }
+
+export default AvailableShowtimes
