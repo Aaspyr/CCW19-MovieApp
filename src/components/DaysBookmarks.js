@@ -1,7 +1,7 @@
 import React from 'react';
 import Movie from './Movie';
 import axios from 'axios';
-
+import PlacesSelectionPanel from './PlacesSelectionPanel'
 
 class DaysBookmarks extends React.Component {
     state = {
@@ -34,6 +34,8 @@ class DaysBookmarks extends React.Component {
     render() {
         return (
             <>
+
+            <PlacesSelectionPanel />
                 {this.state.repertoire.map( day => {
                     return <button key={day._id} onClick={() => this.handleClick(day)}>{day.date}</button>;
                 })}

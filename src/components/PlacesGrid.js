@@ -9,7 +9,7 @@ class PlacesGrid extends React.Component {
         
 
     getPlaces = async () => {
-       const response = await axios.get('https://cinemaapp2019.herokuapp.com/api/repertoires/5d8e684b46056b51e0b923c4');
+       const response = await axios.get('https://cinemaapp2019.herokuapp.com/api/repertoires/5d975e06d2909461ec215060');
        this.setState({occupiedPlaces: response.data.movies[0].showTimes[0].occupiedPlaces});  
     }
 
