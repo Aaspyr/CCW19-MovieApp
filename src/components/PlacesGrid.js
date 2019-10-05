@@ -31,21 +31,21 @@ class PlacesGrid extends React.Component {
 
     render() {
         let rows = new Array(this.props.rows);
-        for(let i = 0; i < this.props.rows; i++){
+        for(let i = 1; i <= this.props.rows; i++){
             rows[i] = new Array(this.props.sits);
-            for(let j = 0; j < this.props.sits; j++){
+            for(let j = 1; j <= this.props.sits; j++){
                 rows[i][j] = {row: i, sit: j};
             }
         }
 
-        const gridStyle = {
-            display : 'grid',
-            gridTemplateColumns: 'repeat(15, 1fr)'
-        }
+        // const gridStyle = {
+        //     display : 'grid',
+        //     gridTemplateColumns: 'repeat(15, 1fr)'
+        // }
 
         const grid = rows.map((row) => row.map((sit) => <Place row={sit.row} sit={sit.sit} status={this.getPlaceStatus(sit.row, sit.sit)} handleClick={this.props.addSelected}/>));
         return(
-            <div style={gridStyle} className='placesGrid'>
+            <div className='placesGrid'>
                 {grid}
             </div>
         );
