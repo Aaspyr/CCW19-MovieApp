@@ -39,10 +39,7 @@ class PlacesSelectionPanel extends React.Component {
             this.setState({
                 // blocked: !this.state.blocked
             })}
-        if(this.state.selectedPlaces[0].length >= 2) {
-            this.setState({
-
-            })}
+            
         return (
         <div className = 'panel'>
            <div className = 'screen'>Ekran</div>
