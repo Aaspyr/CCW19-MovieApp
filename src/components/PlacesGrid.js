@@ -3,14 +3,16 @@ import axios from 'axios';
 import Place from './Place';
 import './PlacesGrid.css';
 
+const URL = 'https://cinemaapp2019.herokuapp.com/api';
+
 class PlacesGrid extends React.Component {
     
     state = { occupiedPlaces: [{row: 0, sit: 0}]}
-        
+    
 
     getPlaces = async () => {
-       const response = await axios.get('https://cinemaapp2019.herokuapp.com/api/repertoires/5d975e06d2909461ec215060');
-       this.setState({occupiedPlaces: response.data.movies[0].showTimes[0].occupiedPlaces});  
+        const response = await axios.get(`${URL}/repertoires/${this.props.id}/${this.props.movie}/${this.props.showTime}`);
+       this.setState({occupiedPlaces: response.data});  
     }
 
     componentDidMount() {
@@ -53,3 +55,9 @@ class PlacesGrid extends React.Component {
 }
 
 export default PlacesGrid;
+
+PlacesGrid.defaultProps = {
+    id: '5d975e06d2909461ec215060',
+    movie: '5d975e06d2909461ec215069',
+    showTime: '5d975e06d2909461ec21506e'
+}

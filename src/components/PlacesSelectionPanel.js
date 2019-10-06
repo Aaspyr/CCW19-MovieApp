@@ -36,8 +36,7 @@ class PlacesSelectionPanel extends React.Component {
             })
             .then(r => console.log(r.status))
             .catch(e => console.log(e));
-        }
-    }
+    }}
 
     render() 
     {
@@ -47,10 +46,14 @@ class PlacesSelectionPanel extends React.Component {
         return (
         <div className = 'panel'>
            <div className = 'screen'>Ekran</div>
-           <PlacesGrid rows={10} sits={15} currentSelected={this.state.selectedPlaces} addSelected={this.updateSelectedPlaces}/>
+           <PlacesGrid rows={10} sits={15} currentSelected={this.state.selectedPlaces} addSelected={this.updateSelectedPlaces} id={this.props.id} movie={this.props.movie} showTime={this.props.showTime}/>
            <button className="reserveButton" onClick={this.approve}>Zarezerwuj</button>
         </div>
+<<<<<<< HEAD
         );
+=======
+    );
+>>>>>>> a97950921d530260f6d0d3639d525bf9b652439a
     }
 }
 export default PlacesSelectionPanel;

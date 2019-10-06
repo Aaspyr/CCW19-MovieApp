@@ -14,7 +14,7 @@ const Movie = props => {
             </div>
             <div className="timeBtns">
                     <div className="box">
-                    <AvailableShowtimes key={props._id+"availableShowtimes"} showTimes={props.showTimes}></AvailableShowtimes>
+            <AvailableShowtimes key={props._id + "availableShowtimes"} showTimes={props.showTimes} selectSale={props.selectSale}></AvailableShowtimes>
                     </div>
             </div>
             </>

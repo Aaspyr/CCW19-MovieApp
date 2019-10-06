@@ -7,7 +7,8 @@ import './DaysBookmarks.css';
 class DaysBookmarks extends React.Component {
     state = {
        repertoire: [],
-       currentMovies: []
+       currentMovies: [],
+       sale: []
     }
     componentDidMount() {
         axios.get('https://cinemaapp2019.herokuapp.com/api/repertoires')
@@ -28,17 +29,24 @@ class DaysBookmarks extends React.Component {
     //     }
     // }
 
-    handleClick = (day) => {
+    handleSelectDay = (day) => {
         this.setState({currentMovies: day.movies})
+    }
+
+    handleSelectSale = (e) => {
+        console.log(e)
     }
 
     render() {
         
         return (
             <>
+<<<<<<< HEAD
 
             <PlacesSelectionPanel />
 
+=======
+>>>>>>> a97950921d530260f6d0d3639d525bf9b652439a
             <div className="container">
                 <div className="navbar">
                     <div className="logo"><div className="kin"> KIN <div className="tape">
@@ -49,19 +57,21 @@ class DaysBookmarks extends React.Component {
                     <div className="daybar">
                         <div className="arrow left"> &lt; </div>
                         {this.state.repertoire.map( day => {
-                        return <div className="day" key={day._id} onClick={() => this.handleClick(day)}>{day.date}</div>;
+                            return <div className="day" key={day._id} onClick={() => this.handleSelectDay(day)}>{day.date}</div>;
                     })}
                         <div className="arrow right"> &gt; </div>
                         <div className="calendar"><img src={require('../icons/kalendarz.svg')} className="calendarpic" alt="calendar"/> </div>
                     </div>
                     <div className="today">Today</div>
-                    <div class="feed">
+                    <div className="feed">
                         {this.state.currentMovies.map(movie => {
-                            return <Movie {...movie} key={movie._id}/>
+                    return <Movie {...movie} key={movie._id} selectSale={this.handleSelectSale}/>
                         })}  
                     </div>
                 </div>
             </div>   
+
+            <PlacesSelectionPanel /> 
             </>
             
         )
