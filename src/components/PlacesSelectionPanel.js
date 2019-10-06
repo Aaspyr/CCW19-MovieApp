@@ -41,7 +41,10 @@ class PlacesSelectionPanel extends React.Component {
     render() 
     {
         if(this.state.approve) {
-                return <ApproveReservation selected={this.state.selectedPlaces}/>
+                return ( <div className="approve">
+                <ApproveReservation selected={this.state.selectedPlaces}/>
+                </div>
+                );
         }
         return (
         <div className = 'panel'>
