@@ -1,0 +1,35 @@
+.pic {
+    display: flex;
+    width: 40%;
+    background-color: rgb(178, 102, 255);
+    /*background-image: url(icons/shrooms.jpg);
+    background-size: cover;*/
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    
+}
+
+.txt {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(256, 256, 256);
+    
+}
+
+.filmImage {
+    width: 95%;
+    height: 95%;
+}
+
+.filmHeader {
+    font-size: 20px;
+    margin: 5px;
+}
+.filmDescription {
+    font-size: 12px;
+    margin: 5px;
+}

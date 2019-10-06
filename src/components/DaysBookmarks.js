@@ -40,27 +40,28 @@ class DaysBookmarks extends React.Component {
             {/* <PlacesSelectionPanel /> */}
 
             <div className="container">
-            <div className="navbar">
-                <div className="logo"><div className="kin"> KIN <div className="tape">
-                <img src={require('../icons/logo.svg') } className="tapepic" alt="logo"/></div></div> DARIA </div>
-                <div className="rep"> REPERTUAR </div>
-            </div>
-            <div className="content">
-                <div className="daybar">
-                    <div className="arrow left"> &lt; </div>
-                    {this.state.repertoire.map( day => {
-                    return <div className="day" key={day._id} onClick={() => this.handleClick(day)}>{day.date}</div>;
-                })}
-                    <div className="arrow right"> &gt; </div>
-                    <div className="calendar"><img src={require('../icons/kalendarz.svg')} className="calendarpic" alt="calendar"/> </div>
+                <div className="navbar">
+                    <div className="logo"><div className="kin"> KIN <div className="tape">
+                    <img src={require('../icons/logo.svg') } className="tapepic" alt="logo"/></div></div> DARIA </div>
+                    <div className="rep"> REPERTUAR </div>
                 </div>
-                <div className="today">Today</div>
-            </div>
-            </div>
-
-                {this.state.currentMovies.map(movie => {
-                    return <Movie {...movie} key={movie._id}/>
-                })}        
+                <div className="content">
+                    <div className="daybar">
+                        <div className="arrow left"> &lt; </div>
+                        {this.state.repertoire.map( day => {
+                        return <div className="day" key={day._id} onClick={() => this.handleClick(day)}>{day.date}</div>;
+                    })}
+                        <div className="arrow right"> &gt; </div>
+                        <div className="calendar"><img src={require('../icons/kalendarz.svg')} className="calendarpic" alt="calendar"/> </div>
+                    </div>
+                    <div className="today">Today</div>
+                    <div class="feed">
+                        {this.state.currentMovies.map(movie => {
+                            return <Movie {...movie} key={movie._id}/>
+                        })}  
+                    </div>
+                </div>
+            </div>   
             </>
             
         )
