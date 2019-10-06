@@ -9,15 +9,14 @@ class PlacesSelectionPanel extends React.Component {
 
     updateSelectedPlaces = (row, sit, status) => {
         const currentSelected = this.state.selectedPlaces;
-        if(this.state.selectedPlaces.length >= 5)
-            return;
-        else if(status === 'available') {
+
+        if(status === 'available' && this.state.selectedPlaces.length < 5) {
             const selectedPlace = {row: row, sit: sit};
             const newCurrentSelected = [...currentSelected, selectedPlace];
 
             this.setState({ selectedPlaces: newCurrentSelected});
         } else if(status === 'selected') {
-            const newCurrentSelected = currentSelected.filter((place) => place.row !== row && place.sit !== sit);
+            const newCurrentSelected = currentSelected.filter((place) => place.row !== row || place.sit !== sit);
 
             this.setState({ selectedPlaces: newCurrentSelected});
         } 
