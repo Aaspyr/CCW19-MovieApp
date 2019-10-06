@@ -10,9 +10,9 @@ class PlacesGrid extends React.Component {
     state = { occupiedPlaces: [{row: 0, sit: 0}]}
     
 
-    getPlaces = async (props) => {
-       const response = await axios.get(`${URL}/repertoir/${props.id}/${props.movie}/${props.showTime}`);
-       this.setState({occupiedPlaces: response.data.occupiedPlaces});  
+    getPlaces = async () => {
+        const response = await axios.get(`${URL}/repertoires/${this.props.id}/${this.props.movie}/${this.props.showTime}`);
+       this.setState({occupiedPlaces: response.data});  
     }
 
     componentDidMount() {
@@ -57,7 +57,7 @@ class PlacesGrid extends React.Component {
 export default PlacesGrid;
 
 PlacesGrid.defaultProps = {
-    dayID: '5d975e06d2909461ec215060',
-    movieID: '5d975e06d2909461ec215069',
-    showTimeID: '5d975e06d2909461ec21506e'
+    id: '5d975e06d2909461ec215060',
+    movie: '5d975e06d2909461ec215069',
+    showTime: '5d975e06d2909461ec21506e'
 }

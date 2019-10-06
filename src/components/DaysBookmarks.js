@@ -41,9 +41,6 @@ class DaysBookmarks extends React.Component {
         
         return (
             <>
-
-            {/* <PlacesSelectionPanel /> */}
-
             <div className="container">
                 <div className="navbar">
                     <div className="logo"><div className="kin"> KIN <div className="tape">
@@ -54,7 +51,7 @@ class DaysBookmarks extends React.Component {
                     <div className="daybar">
                         <div className="arrow left"> &lt; </div>
                         {this.state.repertoire.map( day => {
-                        return <div className="day" key={day._id} onClick={() => this.handleClick(day)}>{day.date}</div>;
+                            return <div className="day" key={day._id} onClick={() => this.handleSelectDay(day)}>{day.date}</div>;
                     })}
                         <div className="arrow right"> &gt; </div>
                         <div className="calendar"><img src={require('../icons/kalendarz.svg')} className="calendarpic" alt="calendar"/> </div>
@@ -67,6 +64,8 @@ class DaysBookmarks extends React.Component {
                     </div>
                 </div>
             </div>   
+
+            <PlacesSelectionPanel /> 
             </>
             
         )
