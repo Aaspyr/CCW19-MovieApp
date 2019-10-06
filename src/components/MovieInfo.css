@@ -1,37 +1,36 @@
 .pic {
-    display: flex;
-    width: 40%;
-    background-color: rgb(178, 102, 255);
-    /*background-image: url(icons/shrooms.jpg);
+  display: flex;
+  width: 40%;
+  background-color: #558c8a;
+  /*background-image: url(icons/shrooms.jpg);
     background-size: cover;*/
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; 
-    
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
 }
 
 .txt {
-    display: flex;
-    width: 60%;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: rgb(256, 256, 256);
-    
+  display: flex;
+  width: 60%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: rgb(256, 256, 256);
 }
 
 .filmImage {
-    width: 95%;
-    height: 95%;
+  width: 95%;
+  height: auto;
+  border: 3px solid #b266ff;
 }
 
 .filmHeader {
-    font-size: 20px;
-    margin: 5px;
+  font-size: 20px;
+  margin: 5px;
 }
 .filmDescription {
-    font-size: 12px;
-    margin: 10px;
-    overflow: hidden;
-    text-align: justify;
+  font-size: 12px;
+  margin: 10px;
+  overflow: hidden;
+  text-align: justify;
 }
