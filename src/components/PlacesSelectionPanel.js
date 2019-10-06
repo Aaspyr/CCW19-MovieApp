@@ -54,6 +54,7 @@ class PlacesSelectionPanel extends React.Component {
         }
         return (
         <div className = 'panel'>
+                <p className='movie-info'>{`${this.props.movieTitle}, godzina: ${this.props.movieTime}`}</p>
            <div className = 'screen'>Ekran</div>
            <PlacesGrid rows={10} sits={15} currentSelected={this.state.selectedPlaces} addSelected={this.updateSelectedPlaces} dayID={this.props.dayID} movieID={this.props.movieID} showTimeID={this.props.showTimeID}/>
            <button className="reserveButton" onClick={this.approve}>Zarezerwuj</button>

@@ -17,7 +17,19 @@ class DaysBookmarks extends React.Component {
     componentDidMount() {
         axios.get('https://cinemaapp2019.herokuapp.com/api/repertoires')
             .then(res => {
-                this.setState({ repertoire: [...res.data], currentMovies: res.data[0].movies, currentDay: res.data[0]._id, today: res.data[0].date })
+                this.setState({ 
+                    repertoire: [...res.data], 
+                    currentMovies: res.data[0].movies, 
+                    currentDay: res.data[0]._id, 
+                    today: res.data[0].date,
+                    room: {
+                        showTimeID: '',
+                        movieID: '',
+                        dayID: '', 
+                        movieTitle: res.data[0].movies[0].title, 
+                        movieTime: res.data[0].movies[0].showTimes[0].time
+                    }
+                })
             })
             .catch(err => {
                 console.log(err);
@@ -36,8 +48,8 @@ class DaysBookmarks extends React.Component {
         this.setState({currentMovies: day.movies, currentDay: day._id})
     }
 
-    handleSelectSale = (showTimeID, movieID, dayID) => {
-        this.setState({ room: { showTimeID, movieID, dayID}})
+    handleSelectSale = (showTimeID, movieID, dayID, movieTitle, movieTime) => {
+        this.setState({ room: { showTimeID, movieID, dayID, movieTitle, movieTime}})
     }
 
     render() {
