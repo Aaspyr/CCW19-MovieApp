@@ -55,7 +55,7 @@ class DaysBookmarks extends React.Component {
                         <div className="calendar"><img src={require('../icons/kalendarz.svg')} className="calendarpic" alt="calendar"/> </div>
                     </div>
                     <div className="today">Today</div>
-                    <div class="feed">
+                    <div className="feed">
                         {this.state.currentMovies.map(movie => {
                             return <Movie {...movie} key={movie._id}/>
                         })}  
