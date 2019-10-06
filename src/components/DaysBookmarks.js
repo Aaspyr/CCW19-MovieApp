@@ -52,6 +52,27 @@ class DaysBookmarks extends React.Component {
         this.setState({ room: { showTimeID, movieID, dayID, movieTitle, movieTime}})
     }
 
+    getFullDay = (day) => {
+        switch(day){
+            case 'pt':
+                return 'Piątek';
+            case 'sob':
+                return 'Sobota';
+            case 'ndz':
+                return 'Niedziela';
+            case 'pon':
+                return 'Poniedziałek';
+            case 'wt':
+                return 'Wtorek';
+            case 'śr':
+                return 'Środa';
+            case 'czw':
+                return 'Czwartek';
+            default:
+                return day;
+        }
+    }
+
     render() {
         
         return (
@@ -62,7 +83,7 @@ class DaysBookmarks extends React.Component {
                         <div className="daybar">
                             <div className="arrow left"> &lt; </div>
                             {this.state.repertoire.map( day => {
-                                return <div className={`day ${day._id === this.state.currentDay ? "active": "" }`} key={day._id} onClick={() => this.handleSelectDay(day)}>{day.date}</div>;
+                                return <div className={`day ${day._id === this.state.currentDay ? "active": "" }`} key={day._id} onClick={() => this.handleSelectDay(day)}>{this.getFullDay(day.date)}</div>;
                         })}
                             <div className="arrow right"> &gt; </div>
                             <div className="calendar"><img src={require('../icons/kalendarz.svg')} className="calendarpic" alt="calendar"/> </div>
