@@ -46,7 +46,7 @@ class PlacesGrid extends React.Component {
             }
         }
 
-        const grid = rows.map((row) => row.map((sit) => <Place row={sit.row} sit={sit.sit} status={this.getPlaceStatus(sit.row, sit.sit)} handleClick={this.props.addSelected}/>));
+        const grid = rows.map((row) => row.map((sit) => <Place row={sit.row} sit={sit.sit} key={`${sit.row}${sit.sit}`} status={this.getPlaceStatus(sit.row, sit.sit)} handleClick={this.props.addSelected}/>));
         return(
             <div className='placesGrid'>
                 {grid}
