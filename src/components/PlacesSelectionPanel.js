@@ -5,12 +5,13 @@ import ApproveReservation from './ApproveReservation';
 
 class PlacesSelectionPanel extends React.Component {
 
-    state = { selectedPlaces: [{row: 3, sit: 10}], approve: false, blocked: false };
+    state = { selectedPlaces: [{row: 3, sit: 10}], approve: false };
 
     updateSelectedPlaces = (row, sit, status) => {
         const currentSelected = this.state.selectedPlaces;
-        const blocked = this.state.blocked;
-        if(status === 'available') {
+        if(this.state.selectedPlaces.length >= 5)
+            return;
+        else if(status === 'available') {
             const selectedPlace = {row: row, sit: sit};
             const newCurrentSelected = [...currentSelected, selectedPlace];
 
@@ -19,27 +20,18 @@ class PlacesSelectionPanel extends React.Component {
             const newCurrentSelected = currentSelected.filter((place) => place.row !== row && place.sit !== sit);
 
             this.setState({ selectedPlaces: newCurrentSelected});
-        } else if (blocked === true) {
-            //blokowanko wybieranka
-        }
+        } 
     }
     approve = () => {
         this.setState({
             approve: !this.state.approve
         })
     }
-    
-
     render() 
     {
         if(this.state.approve) {
                 return <ApproveReservation selected={this.state.selectedPlaces}/>
         }
-        if(this.state.selectedPlaces.length >=5) {
-            this.setState({
-                // blocked: !this.state.blocked
-            })}
-
         return (
         <div className = 'panel'>
            <div className = 'screen'>Ekran</div>
