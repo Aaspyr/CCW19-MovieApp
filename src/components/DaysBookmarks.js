@@ -7,7 +7,8 @@ import './DaysBookmarks.css';
 class DaysBookmarks extends React.Component {
     state = {
        repertoire: [],
-       currentMovies: []
+       currentMovies: [],
+       sale: []
     }
     componentDidMount() {
         axios.get('https://cinemaapp2019.herokuapp.com/api/repertoires')
@@ -28,8 +29,12 @@ class DaysBookmarks extends React.Component {
     //     }
     // }
 
-    handleClick = (day) => {
+    handleSelectDay = (day) => {
         this.setState({currentMovies: day.movies})
+    }
+
+    handleSelectSale = (e) => {
+        console.log(e)
     }
 
     render() {
@@ -57,7 +62,7 @@ class DaysBookmarks extends React.Component {
                     <div className="today">Today</div>
                     <div class="feed">
                         {this.state.currentMovies.map(movie => {
-                            return <Movie {...movie} key={movie._id}/>
+                    return <Movie {...movie} key={movie._id} selectSale={this.handleSelectSale}/>
                         })}  
                     </div>
                 </div>

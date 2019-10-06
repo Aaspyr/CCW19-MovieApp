@@ -9,8 +9,8 @@ class PlacesGrid extends React.Component {
         
 
     getPlaces = async () => {
-       const response = await axios.get('https://cinemaapp2019.herokuapp.com/api/repertoires/5d975e06d2909461ec215060');
-       this.setState({occupiedPlaces: response.data.movies[0].showTimes[0].occupiedPlaces});  
+        const response = await axios.get(`https://cinemaapp2019.herokuapp.com/api/repertoires/${this.props.dayID}/${this.props.movieID}/${this.props.showTimeID}`);
+       this.setState({occupiedPlaces: response.data});  
     }
 
     componentDidMount() {
@@ -53,3 +53,9 @@ class PlacesGrid extends React.Component {
 }
 
 export default PlacesGrid;
+
+PlacesGrid.defaultProps = {
+    dayID: '5d975e06d2909461ec215060',
+    movieID: '5d975e06d2909461ec215069',
+    showTimeID: '5d975e06d2909461ec21506e'
+}
