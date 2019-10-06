@@ -51,12 +51,8 @@ class PlacesSelectionPanel extends React.Component {
            <PlacesGrid rows={10} sits={15} currentSelected={this.state.selectedPlaces} addSelected={this.updateSelectedPlaces} dayID={this.props.dayID} movieID={this.props.movieID} showTimeID={this.props.showTimeID}/>
            <button className="reserveButton" onClick={this.approve}>Zarezerwuj</button>
         </div>
-<<<<<<< HEAD
-    );
-=======
         );
 
->>>>>>> 1652d01073e97e7fed22bee62223782dacf6593b
     }
 }
 export default PlacesSelectionPanel;
