@@ -37,7 +37,6 @@ class DaysBookmarks extends React.Component {
     }
 
     handleSelectSale = (showTimeID, movieID, dayID) => {
-        console.log(showTimeID, movieID, dayID)
         this.setState({ room: { showTimeID, movieID, dayID}})
     }
 
@@ -51,7 +50,7 @@ class DaysBookmarks extends React.Component {
                         <div className="daybar">
                             <div className="arrow left"> &lt; </div>
                             {this.state.repertoire.map( day => {
-                                return <div className="day" key={day._id} onClick={() => this.handleSelectDay(day)}>{day.date}</div>;
+                                return <div className={`day ${day._id === this.state.currentDay ? "active": "" }`} key={day._id} onClick={() => this.handleSelectDay(day)}>{day.date}</div>;
                         })}
                             <div className="arrow right"> &gt; </div>
                             <div className="calendar"><img src={require('../icons/kalendarz.svg')} className="calendarpic" alt="calendar"/> </div>
