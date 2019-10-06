@@ -28,7 +28,7 @@ class PlacesSelectionPanel extends React.Component {
         this.setState({
             approve: !this.state.approve
         })
-        for (let place in this.state.selectedPlaces){
+        for (let place of this.state.selectedPlaces){
             axios.put(`${URL}/repertoires/${this.props.dayID}/${this.props.movieID}/${this.props.showTimeID}`,{
     
                 "row": place.row,
@@ -36,8 +36,6 @@ class PlacesSelectionPanel extends React.Component {
             })
             .then(r => console.log(r.status))
             .catch(e => console.log(e));
-
-            console.log(place.row, place.sit)
     }}
 
     render() 
