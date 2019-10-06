@@ -2,6 +2,9 @@ import React from 'react';
 import PlacesGrid from './PlacesGrid';
 import './PlacesSelectionPanel.css';
 import ApproveReservation from './ApproveReservation';
+import axios from 'axios';
+
+const URL = 'https://cinemaapp2019.herokuapp.com/api';
 
 class PlacesSelectionPanel extends React.Component {
 
@@ -21,11 +24,21 @@ class PlacesSelectionPanel extends React.Component {
             this.setState({ selectedPlaces: newCurrentSelected});
         } 
     }
-    approve = () => {
+    approve = props => {
         this.setState({
             approve: !this.state.approve
         })
+        for (let i=1; i<=this.state.selectedPlaces.length; i++){
+            axios.put(`${URL}/repertoir/${props.id}/${props.movie}/${props.showTime}`,{
+    
+                "row": this.state.selectedPlace.row[i],
+                "sit": this.state.selectedPlace.sit[i]
+            })
+            .then(r => console.log(r.status))
+            .catch(e => console.log(e));
+        }}
     }
+
     render() 
     {
         if(this.state.approve) {
@@ -38,7 +51,6 @@ class PlacesSelectionPanel extends React.Component {
            <button className="reserveButton" onClick={this.approve}>Zarezerwuj</button>
         </div>
     );
-}
 }
 
 export default PlacesSelectionPanel;
