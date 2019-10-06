@@ -1,0 +1,216 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh; 
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    flex-direction: column; 
+    justify-content: space-between;
+}
+
+.navbar {
+    background-color: rgba(56, 60, 67, 0.8);
+    width: 100%;
+    height: 5rem;
+    display: flex;
+    padding: 5px;
+}
+
+.logo {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    font-size: 4rem;
+    color: rgb(256, 256, 256);
+    font-weight: 300; 
+    letter-spacing: 0.05em;
+    font-family: 'Quicksand', sans-serif;
+    /*border: 2px solid red;*/
+}
+
+
+.tapepic {
+    width: 3.5rem;
+    height: 3rem;
+}
+
+.kin {
+    display: flex;
+    /*border: 2px solid white;*/
+    padding-right: 0.8rem;
+}
+
+.rep {
+    display: flex;
+    height: 100%;
+    width: 40%;
+    font-size: 2.3rem;
+    color: rgb(256, 256, 256);
+    font-weight: 100;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.content {
+    /*border: 5px solid red;*/
+    height: 90%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.daybar {
+    display: flex;
+    height: 7%;
+    width: 90%;
+    font-size: 1.6em;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+
+}
+
+.arrow {
+    display: flex;
+    width: 5%;
+    height: 70%;
+    justify-content: center; 
+    align-items: center;
+    font-weight: 500;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.right {
+    justify-content: flex-end;
+}
+
+.calendar {
+    display: flex;
+    padding-left: 1.5em;
+    
+}
+
+.calendarpic {
+    width: 3.5rem;
+    
+}
+.day {
+    background-color: white;
+    display: flex;
+    width: 20%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    border-radius: 5px; 
+}
+
+.today {
+    display: flex;
+    /*border: 2px solid green;*/
+    height: 5%;
+    width: 90%;
+    font-size: 1.4em;
+    align-items: flex-end;
+    font-weight: 400;
+}
+
+.feed {
+    /*border: 2px solid orange;*/
+    height: 78%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.moviebox {
+    display: flex;
+    /*border: 2px solid red;*/
+    height: 45%;
+    width: 30%;
+    background-color: rgba(66, 128, 125, 0.9);
+    
+}
+
+.pic {
+    display: flex;
+    width: 40%;
+    background-color: rgb(178, 102, 255);
+    /*background-image: url(icons/shrooms.jpg);
+    background-size: cover;*/
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    
+}
+
+.shrooms {
+    width: 100%;
+}
+
+
+.txt {
+    display: flex;
+    width: 60%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(256, 256, 256);
+    
+}
+
+.timebtns {
+    display: flex;
+    /*border: 2px solid black;*/
+    height: 45%;
+    width: 68%;
+    background-color: rgb(222, 235, 234);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.box {
+    
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 60%;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.time {
+    display: flex;
+    font-weight: 700;
+    font-size: 1.3em;
+    height: 25%;
+    width: 30%;
+    background-color: rgb(30, 78, 134);
+    color: rgb(256, 256, 256);
+    border-radius: 0.3em;
+    align-items: center;
+    justify-content: center;
+}
+
+.time:hover {
+    background-color: rgb(178, 102, 255);
+    cursor: pointer;
+    
+}
+
+.day:hover {
+    background-color: rgb(178, 102, 255);
+    cursor: pointer;
+    color: rgb(256, 256, 256);
+}

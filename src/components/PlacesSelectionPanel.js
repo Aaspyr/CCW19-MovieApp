@@ -39,7 +39,7 @@ class PlacesSelectionPanel extends React.Component {
             this.setState({
                 // blocked: !this.state.blocked
             })}
-            
+
         return (
         <div className = 'panel'>
            <div className = 'screen'>Ekran</div>
@@ -50,4 +50,4 @@ class PlacesSelectionPanel extends React.Component {
 }
 }
 
-export default PlacesSelectionPanel
+export default PlacesSelectionPanel;

@@ -3,11 +3,11 @@ import React from 'react';
 const MovieInfo = props => {
     return (
         <div>
-            <img src={props.image} className="filmImage" alt=""/>
+            <img src={props.image} className="filmImage" alt="filmImage"/>
             <h1 className="filmImage">{props.title}</h1>
             <p className="filmDescription">{props.description}</p>
         </div>
     );
 }
 
-export default MovieInfo
+export default MovieInfo;

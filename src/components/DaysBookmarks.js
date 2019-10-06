@@ -1,7 +1,8 @@
 import React from 'react';
 import Movie from './Movie';
 import axios from 'axios';
-import PlacesSelectionPanel from './PlacesSelectionPanel'
+import PlacesSelectionPanel from './PlacesSelectionPanel';
+import './DaysBookmarks.css';
 
 class DaysBookmarks extends React.Component {
     state = {
@@ -32,17 +33,34 @@ class DaysBookmarks extends React.Component {
     }
 
     render() {
+        
         return (
             <>
 
-            <PlacesSelectionPanel />
-                {this.state.repertoire.map( day => {
-                    return <button key={day._id} onClick={() => this.handleClick(day)}>{day.date}</button>;
+            {/* <PlacesSelectionPanel /> */}
+
+            <div className="container">
+            <div className="navbar">
+                <div className="logo"><div className="kin"> KIN <div className="tape">
+                <img src={require('../icons/logo.svg') } className="tapepic" alt="logo"/></div></div> DARIA </div>
+                <div className="rep"> REPERTUAR </div>
+            </div>
+            <div className="content">
+                <div className="daybar">
+                    <div className="arrow left"> &lt; </div>
+                    {this.state.repertoire.map( day => {
+                    return <div className="day" key={day._id} onClick={() => this.handleClick(day)}>{day.date}</div>;
                 })}
+                    <div className="arrow right"> &gt; </div>
+                    <div className="calendar"><img src={require('../icons/kalendarz.svg')} className="calendarpic" alt="calendar"/> </div>
+                </div>
+                <div className="today">Today</div>
+            </div>
+            </div>
 
                 {this.state.currentMovies.map(movie => {
                     return <Movie {...movie} key={movie._id}/>
-                })}         
+                })}        
             </>
             
         )
