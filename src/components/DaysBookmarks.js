@@ -41,12 +41,6 @@ class DaysBookmarks extends React.Component {
         
         return (
             <>
-<<<<<<< HEAD
-
-            <PlacesSelectionPanel />
-
-=======
->>>>>>> a97950921d530260f6d0d3639d525bf9b652439a
             <div className="container">
                 <div className="navbar">
                     <div className="logo"><div className="kin"> KIN <div className="tape">
