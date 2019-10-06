@@ -24,7 +24,7 @@ class PlacesSelectionPanel extends React.Component {
             this.setState({ selectedPlaces: newCurrentSelected});
         } 
     }
-    approve = props => {
+    approve = () => {
         this.setState({
             approve: !this.state.approve
         })
@@ -38,11 +38,17 @@ class PlacesSelectionPanel extends React.Component {
             .catch(e => console.log(e));
     }}
 
+    backToChoosingPlaces = () => {
+        this.setState({
+            approve: false
+        })
+    }
+
     render() 
     {
         if(this.state.approve) {
                 return ( <div className="approve">
-                <ApproveReservation selected={this.state.selectedPlaces}/>
+                    <ApproveReservation selected={this.state.selectedPlaces} backToChoosingPlaces={this.backToChoosingPlaces}/>
                 </div>
                 );
         }
