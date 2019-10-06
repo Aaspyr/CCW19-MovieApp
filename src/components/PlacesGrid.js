@@ -11,12 +11,18 @@ class PlacesGrid extends React.Component {
     
 
     getPlaces = async () => {
-        const response = await axios.get(`${URL}/repertoires/${this.props.id}/${this.props.movie}/${this.props.showTime}`);
+        const response = await axios.get(`${URL}/repertoires/${this.props.dayID}/${this.props.movieID}/${this.props.showTimeID}`);
        this.setState({occupiedPlaces: response.data});  
     }
 
     componentDidMount() {
         this.getPlaces();
+    }
+
+    componentDidUpdate(prevProps, prevState) {
+        if (prevProps.dayID !== this.props.dayID || prevProps.movieID !== this.props.movieID || prevProps.showTimeID !== this.props.showTimeID) {
+            this.getPlaces();
+        }
     }
 
     getPlaceStatus = (row, sit) => {
@@ -40,11 +46,6 @@ class PlacesGrid extends React.Component {
             }
         }
 
-        // const gridStyle = {
-        //     display : 'grid',
-        //     gridTemplateColumns: 'repeat(15, 1fr)'
-        // }
-
         const grid = rows.map((row) => row.map((sit) => <Place row={sit.row} sit={sit.sit} status={this.getPlaceStatus(sit.row, sit.sit)} handleClick={this.props.addSelected}/>));
         return(
             <div className='placesGrid'>
@@ -57,7 +58,7 @@ class PlacesGrid extends React.Component {
 export default PlacesGrid;
 
 PlacesGrid.defaultProps = {
-    id: '5d975e06d2909461ec215060',
-    movie: '5d975e06d2909461ec215069',
-    showTime: '5d975e06d2909461ec21506e'
+    dayID: '5d975e06d2909461ec215060',
+    movieID: '5d975e06d2909461ec215069',
+    showTimeID: '5d975e06d2909461ec21506e'
 }

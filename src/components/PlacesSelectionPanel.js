@@ -8,7 +8,7 @@ const URL = 'https://cinemaapp2019.herokuapp.com/api';
 
 class PlacesSelectionPanel extends React.Component {
 
-    state = { selectedPlaces: [{row: 3, sit: 10}], approve: false };
+    state = { selectedPlaces: [], approve: false };
 
     updateSelectedPlaces = (row, sit, status) => {
         const currentSelected = this.state.selectedPlaces;
@@ -28,14 +28,16 @@ class PlacesSelectionPanel extends React.Component {
         this.setState({
             approve: !this.state.approve
         })
-        for (let i=1; i<=this.state.selectedPlaces.length; i++){
-            axios.put(`${URL}/repertoir/${props.id}/${props.movie}/${props.showTime}`,{
+        for (let place in this.state.selectedPlaces){
+            axios.put(`${URL}/repertoires/${this.props.dayID}/${this.props.movieID}/${this.props.showTimeID}`,{
     
-                "row": this.state.selectedPlace.row[i],
-                "sit": this.state.selectedPlace.sit[i]
+                "row": place.row,
+                "sit": place.sit
             })
             .then(r => console.log(r.status))
             .catch(e => console.log(e));
+
+            console.log(place.row, place.sit)
     }}
 
     render() 
@@ -46,10 +48,15 @@ class PlacesSelectionPanel extends React.Component {
         return (
         <div className = 'panel'>
            <div className = 'screen'>Ekran</div>
-           <PlacesGrid rows={10} sits={15} currentSelected={this.state.selectedPlaces} addSelected={this.updateSelectedPlaces} id={this.props.id} movie={this.props.movie} showTime={this.props.showTime}/>
+           <PlacesGrid rows={10} sits={15} currentSelected={this.state.selectedPlaces} addSelected={this.updateSelectedPlaces} dayID={this.props.dayID} movieID={this.props.movieID} showTimeID={this.props.showTimeID}/>
            <button className="reserveButton" onClick={this.approve}>Zarezerwuj</button>
         </div>
+<<<<<<< HEAD
     );
+=======
+        );
+
+>>>>>>> 1652d01073e97e7fed22bee62223782dacf6593b
     }
 }
 export default PlacesSelectionPanel;
