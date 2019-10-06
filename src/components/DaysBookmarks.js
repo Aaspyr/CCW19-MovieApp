@@ -55,7 +55,7 @@ class DaysBookmarks extends React.Component {
                             <div className="arrow right"> &gt; </div>
                             <div className="calendar"><img src={require('../icons/kalendarz.svg')} className="calendarpic" alt="calendar"/> </div>
                         </div>
-                        <div className="today">{`${this.state.today},${this.state.date}`}</div>
+                        <div className="today">{`Dzisiaj mamy: ${this.state.today}, ${this.state.date}`}</div>
                         <div className="feed">
                             {this.state.currentMovies.map(movie => {
                                 return <Movie {...movie} currentDay={this.state.currentDay} key={movie._id} selectSale={this.handleSelectSale}/>

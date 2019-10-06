@@ -120,8 +120,12 @@
     align-items: center;
     font-size: 20px;
     border-radius: 5px;
+    margin: 0 5px;
 }
-
+.active {
+    background-color:rgb(178, 102, 255);
+    color: white;
+}
 .today {
     display: flex;
     /*border: 2px solid green;*/
