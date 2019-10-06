@@ -37,7 +37,7 @@ class DaysBookmarks extends React.Component {
         return (
             <>
 
-            {/* <PlacesSelectionPanel /> */}
+            <PlacesSelectionPanel />
 
             <div className="container">
                 <div className="navbar">
