@@ -31,5 +31,7 @@
 }
 .filmDescription {
     font-size: 12px;
-    margin: 5px;
+    margin: 10px;
+    overflow: hidden;
+    text-align: justify;
 }
