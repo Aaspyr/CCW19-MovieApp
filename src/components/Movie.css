@@ -1,0 +1,30 @@
+
+.movieBox {
+    display: flex;
+    /*border: 2px solid red;*/
+    height: 45%;
+    width: 30%;
+    background-color: rgba(66, 128, 125, 0.9);
+    
+}
+
+.timeBtns {
+    display: flex;
+    /*border: 2px solid black;*/
+    height: 45%;
+    width: 68%;
+    background-color: rgb(222, 235, 234);
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center; 
+}
+
+.box {
+    
+    display: flex;
+    flex-wrap: wrap;
+    width: 95%;
+    height: 60%;
+    align-items: center;
+    justify-content: space-around;
+}

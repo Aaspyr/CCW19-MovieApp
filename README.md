@@ -1,68 +1,86 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Kino Daria App  
+is simple cinema app to get information about repertoir in Kino Daria. This app also give you an opportunity to reserve places for choosen movie.
 
-## Available Scripts
+## Comends to start:
 
-In the project directory, you can run:
+`npm start`
 
-### `npm start`
+## technologies used:
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+-React,
+-CSS, 
+-MongoDB,
+-mongoose,
+-ExpressJs.
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## how it look:
+ Start page of app show repertoir for the current day. There are bookmarks for evryday repertoires at the top, so you can swich days, and watch repertoirs fo next seven days.
 
-### `npm test`
+![start screen](./screens/start.png)
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Panel with day bookmarks:
 
-### `npm run build`
+![day bookmarks](./screens/panel.png)
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+When you click on choosen hour, you will be directed to the page where you will be able to choose seats for the screening.
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+![hour of screening](./screens/hour.png)
+![seates to choos](./screens/seats.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You can choose seats by click on them, and then confirm it by clicking "zarezerwuj".
 
-### `npm run eject`
+![reserve place](./screens/reserve.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## API Endpoints:
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+1. GET api/repertoires - list of movies for 7 days,
+2. GET api/repertoires/:id  - repertoir of movies for one, specific day with the given id,
+3. GET api/repertoir/:id/:movie/:showTime - list off occupied placesc for specific screening,
+4. PUT api/repertoir/:id/:movie/:showTime - adding selected places for screening to occupied places.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Current structure of project
 
-## Learn More
+- node_modules..
+- public
+    - index.html - base html structure
+    - logo.svg
+    - robots.txt
+- src
+    - components - folder with components used in app and files with styling these components. Components are simply                named to give direct information about their purpose.
+        - App.js (function that returns start page of App)
+        - ApproveReservation.js (function to approve reservation, it confirms choosen places)
+        - AvailableShowTimes.js (component with available show times for choosen movie on choosen day)
+        - AvailableShowTimes.css ( styling for AvailableShowTimes component )
+        - DaysBookmarks.js (component with showing bookmarks for available days)
+        - DaysBookmarks.css (styling for dayBookmarks component)
+        - Movie.js (component with showing available movies)
+        - Movie.css (styling for Movie component)
+        - MovieInfo.js (component with showing available movies)
+        - MovieInfo.css (styling for MovieInfo component)
+        - Place.js (component with setting status for seats)
+        - Place.css (styling for Place component)
+        - PlaceGrid.js (component with showing full spacing os seats with their status)
+        - PlaceGrid.css (styling for PlaceGrid component)
+        - PlaceSelectionPanel.js (component with panel to select places)
+        - PlaceSelectionPanel.css (styling for PlaceSelectionPanel component)
+    - icons - folder with icons used in app
+        - kalendarz.svg
+        - logo.svg
+    - style - folder for some marks in app and files with styling them
+        - confirmmemail.css
+        - confirmmemail.html
+        - index.css
+        - index.html
+        - indexplus.css
+        - indexplus.html
+        - movie.css
+        - movie.html
+        - venue.css
+        - venue.html
+    - index.js
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
 
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify

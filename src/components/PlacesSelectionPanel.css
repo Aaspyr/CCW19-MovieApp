@@ -1,0 +1,42 @@
+.panel {
+  height: 95vh;
+  background-color: #fffdfd;
+}
+
+.reserveButton {
+  background-color: #b366ff;
+  color: white;
+  width: 15%;
+  height: 5%;
+  border-radius: 10%;
+  float: right;
+  margin-right: 16%;
+  margin-top: 3%;
+}
+
+.screen {
+  background-color: lightgrey;
+  text-align: center;
+  color: white;
+  width: 60%;
+  margin: auto;
+  border-radius: 10%;
+}
+
+.approve {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* background-color: #B366FF; */
+  width: 80%;
+  height: 30%;
+  margin: 1em;
+  margin: 1em auto;
+}
+.movie-info {
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 18px;
+}

@@ -1,0 +1,195 @@
+* {
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    width: 100vw;
+    height: 100vh; 
+    border: 0.5rem solid rgba(56, 60, 67, 0.8);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    flex-direction: column; 
+    justify-content: space-between
+}
+
+.navbar {
+    background-color: rgba(56, 60, 67, 0.8);
+    width: 100%;
+    height: 4.6rem;
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    height: 100%;
+    width: 50%;
+    font-size: 4rem;
+    color: rgb(256, 256, 256);
+    font-weight: 300; 
+    letter-spacing: 0.05em;
+    font-family: 'Quicksand', sans-serif;
+    /*border: 2px solid red;*/ 
+}
+
+
+.tapepic {
+    width: 3.5rem;
+    height: 3rem;
+}
+
+.kin {
+    display: flex;
+    /*border: 2px solid white;*/ 
+    padding-right: 0.8rem;
+}
+
+.rep {
+    display: flex;
+    height: 100%;
+    width: 40%;
+    font-size: 2.3rem;
+    color: rgb(256, 256, 256);
+    font-weight: 100;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.content {
+    /*border: 5px solid red;*/
+    height: 90%;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.returnbar {
+    display: flex;
+    /*border: 2px solid blue;*/
+    height: 7%;
+    width: 90%;
+    font-size: 1.6em;
+    align-items: center;
+
+}
+
+.arrow {
+    display: flex;
+    /*border: 2px solid black;*/
+    width: 5%;
+    height: 70%;
+    justify-content: center; 
+    align-items: center;
+    font-weight: 700;
+}
+
+.left {
+    justify-content: flex-start;
+}
+
+.return {
+    display: flex;
+    /*border: 2px solid red;*/
+    width: 18%;
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    border-radius: 0.3em; 
+    background-color: rgb(178, 102, 255);
+    color: rgb(256, 256, 256); 
+}
+
+.feed {
+    /*border: 2px solid orange;*/
+    height: 65%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    align-items: flex-end
+
+}
+
+.moviebox {
+    display: flex;
+    /*border: 2px solid red;*/
+    height: 85%;
+    width: 75%;
+    background-color: rgba(66, 128, 125, 0.9);
+    
+}
+
+.pic {
+    display: flex;
+    width: 45%;
+    background-color: rgb(178, 102, 255);
+    /*background-image: url(icons/shrooms.jpg);
+    background-size: cover;*/
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    
+}
+
+.shrooms {
+    width: 100%;
+}
+
+
+.txt {
+    display: flex;
+    width: 55%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgb(256, 256, 256);
+    padding: 1.5rem;
+    text-align: justify;
+    
+}
+
+.timebtns {
+    display: flex;
+    /*border: 2px solid black;*/
+    height: 85%;
+    width: 25%;
+    background-color: rgb(222, 235, 234);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+.box {
+    
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 90%;
+    align-items: center;
+    justify-content: space-around;
+    /*border: 2px solid blue;*/
+}
+
+
+.time {
+    display: flex;
+    font-weight: 700;
+    font-size: 1.3em;
+    height: 9%;
+    width: 65%;
+    background-color: rgb(30, 78, 134);
+    color: rgb(256, 256, 256);
+    border-radius: 0.3em;
+    align-items: center;
+    justify-content: center;
+}
+
+.updown {
+    font-weight: 700;
+    font-size: 1.5em;
+    
+}

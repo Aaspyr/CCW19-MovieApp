@@ -1,0 +1,8 @@
+.placesGrid{
+    display : grid;
+    grid-template-columns: repeat(15, 1fr);
+    width: 70%;
+    height: 60%;
+    margin: auto;
+    margin-top: 5%;
+}

@@ -1,0 +1,39 @@
+.placeAvailable{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1E4E86;
+    color: white;
+    width: 75%;
+    height: 80%;
+    text-align: center;
+    border-radius: 15%;
+}
+.placeAvailable:hover {
+    background-color: #B366FF;
+    
+}
+
+.placeSelected{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #B366FF;
+    color: white;
+    width: 75%;
+    height: 80%;
+    text-align: center;
+    border-radius: 15%;
+}
+
+.placeOccupied{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#373839;
+    color: white;
+    width: 75%;
+    height: 80%;
+    text-align: center;
+    border-radius: 15%;
+}
